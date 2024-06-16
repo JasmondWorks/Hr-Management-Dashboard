@@ -5,7 +5,7 @@ import { createContext, useEffect, useState } from "react";
 export const AppContext = createContext();
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("");
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
