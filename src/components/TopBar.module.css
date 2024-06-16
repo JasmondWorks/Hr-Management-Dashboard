@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size);
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--size--md);
+  }
+}
+
+.menuWrapper,
+.btnWrapper {
+  display: flex;
+  /* align-items: center; */
+  gap: var(--size);
+}
+.menuWrapper {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

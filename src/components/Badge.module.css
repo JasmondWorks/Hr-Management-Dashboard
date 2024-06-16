@@ -1,0 +1,24 @@
+.badge {
+  font-size: 0.5rem;
+  font-weight: 700;
+  padding: 0.5em;
+  border-radius: var(--size--sm);
+  -webkit-border-radius: var(--size--sm);
+  -moz-border-radius: var(--size--sm);
+  -ms-border-radius: var(--size--sm);
+  -o-border-radius: var(--size--sm);
+
+  &svgpath {
+    --clr-icon-bg: #30be82;
+    background-color: var(--clr-bg);
+  }
+}
+
+.success {
+  background-color: #16241e;
+}
+
+.error {
+  background-color: #16241e;
+  --clr-icon-bg: #f45b69;
+}

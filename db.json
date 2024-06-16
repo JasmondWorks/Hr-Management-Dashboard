@@ -1,0 +1,214 @@
+{
+  "admins": [
+    {
+      "id": "admin1",
+      "username": "admin1",
+      "password": "admin1",
+      "employees": [
+        {
+          "id": "emp1",
+          "name": "Obafemi",
+          "type": "On-site",
+          "status": "permanent",
+          "profileImg": "",
+          "phone": "",
+          "email": "abcdefg@gmail.com",
+          "maritalStatus": "",
+          "gender": "male",
+          "dob": "",
+          "nationality": "",
+          "city": "Lagos",
+          "username": "jasmond",
+          "joinDate": "",
+          "officeLocation": "",
+          "numWorkingDays": 777,
+          "attendance": [
+            {
+              "checkInTime": "",
+              "checkOutTime": "",
+              "breakTime": "",
+              "workingHours": "",
+              "date": ""
+            }
+          ],
+          "leave": [
+            {
+              "date": "",
+              "startDate": "",
+              "finishDate": "",
+              "reportingMan": "",
+              "status": "pending"
+            }
+          ]
+        },
+        {
+          "id": "emp1",
+          "name": "Obafemi",
+          "type": "On-site",
+          "status": "permanent",
+          "profileImg": "",
+          "phone": "",
+          "email": "abcdefg@gmail.com",
+          "maritalStatus": "",
+          "gender": "male",
+          "dob": "",
+          "nationality": "",
+          "city": "Lagos",
+          "username": "jasmond",
+          "joinDate": "",
+          "officeLocation": "",
+          "numWorkingDays": 777
+        },
+        {
+          "id": "emp1",
+          "name": "Obafemi",
+          "type": "On-site",
+          "status": "permanent",
+          "profileImg": "",
+          "phone": "",
+          "email": "abcdefg@gmail.com",
+          "maritalStatus": "",
+          "gender": "male",
+          "dob": "",
+          "nationality": "",
+          "city": "Lagos",
+          "username": "jasmond",
+          "joinDate": "",
+          "officeLocation": "",
+          "numWorkingDays": 777
+        }
+      ],
+      "candidates": [
+        {
+          "id": "cand1",
+          "appliedPosId": "",
+          "appliedDate": "",
+          "email": "abcdefg@gmail.com",
+          "mobileNum": "",
+          "status": "selected"
+        }
+      ],
+      "departments": [
+        {
+          "id": "dept1",
+          "name": "Design",
+          "designations": [
+            {
+              "id": "type1",
+              "name": "UI/UX Designer",
+              "employeeIds": ["emp1"],
+              "salaryPerMonth": ""
+            },
+            {
+              "id": "type2",
+              "name": "UI Developer",
+              "employeeIds": ["emp2"],
+              "salaryPerMonth": ""
+            },
+            {
+              "id": "type3",
+              "name": "Design Lead",
+              "employeeIds": ["emp3"],
+              "salaryPerMonth": ""
+            }
+          ]
+        },
+        {
+          "id": "dept2",
+          "name": "PM",
+          "designations": [
+            {
+              "id": "type1",
+              "name": "Project Manager",
+              "employeeIds": ["emp1"]
+            }
+          ]
+        },
+        {
+          "id": "dept3",
+          "name": "HR",
+          "designations": [
+            {
+              "id": "type1",
+              "name": "HR Executive",
+              "employeeIds": ["emp1"]
+            }
+          ]
+        },
+        {
+          "name": "Development",
+          "designations": [
+            { "id": "type1", "name": "PHP Developer", "employeeIds": ["emp1"] },
+            {
+              "id": "type2",
+              "name": "React JS Developer",
+              "employeeIds": ["emp1"]
+            },
+            {
+              "id": "type3",
+              "name": "Python Developer",
+              "employeeIds": ["emp1"]
+            }
+          ]
+        },
+        {
+          "id": "dept5",
+          "name": "Sales",
+          "designations": [
+            {
+              "id": "type1",
+              "name": "BDM",
+              "employeeIds": ["emp1"]
+            },
+            {
+              "id": "type2",
+              "name": "Sales Manager",
+              "employeeIds": ["emp1"]
+            }
+          ]
+        }
+      ],
+      "attendance": [],
+      "payroll": [
+        {
+          "employeeId": "emp1",
+          "status": "pending",
+          "deduction": "",
+          "month": ""
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj1",
+          "name": "Amongus - Discovery Phase",
+          "employeeIds": ["emp1"],
+          "startDate": "",
+          "finishDate": "",
+          "status": "completed"
+        },
+        {
+          "id": "proj2",
+          "name": "Wildcare - Development Project",
+          "employeeIds": ["emp1"],
+          "startDate": "",
+          "finishDate": "",
+          "status": "uncompleted"
+        }
+      ],
+      "jobs": [
+        {
+          "id": "",
+          "status": "inactive"
+        }
+      ],
+
+      "hrMan": [
+        {
+          "id": "hrMan1",
+          "name": "Jasmond",
+          "employeeIds": [1000]
+        }
+      ]
+    }
+  ]
+}

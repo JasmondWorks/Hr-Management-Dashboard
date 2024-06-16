@@ -1,0 +1,39 @@
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: 1px solid var(--clr-border);
+  padding: var(--size--sm) var(--size);
+  border-radius: var(--radius);
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
+  line-height: 1;
+  color: var(--clr-fg);
+  background-color: var(--clr-bg);
+}
+.square {
+  padding: var(--size--sm);
+}
+.neutral {
+  --clr-fg: var(--clr-neutral-100);
+  --clr-bg: var(--clr-neutral-700);
+
+  color: var(--clr-fg);
+  background-color: var(--clr-bg);
+}
+.accent {
+  background-color: var(--clr-accent);
+}
+body[data-theme="light"] {
+  .neutral {
+    --clr-fg: var(--clr-neutral-700);
+    --clr-bg: var(--clr-neutral-100);
+  }
+  .accent {
+    --clr-fg: var(--clr-neutral-100);
+  }
+  .btn {
+    border: 1px solid var(--clr-border);
+  }
+}
