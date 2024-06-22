@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import Button from "./Button";
 import { AppContext } from "../App";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 function Navbar() {
   const { theme, setTheme } = useContext(AppContext);
@@ -571,11 +571,24 @@ function Navbar() {
       ),
     },
   ];
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
     <div className={styles.wrapper}>
       <div>
-        <div className={styles.logo}>logo</div>
+        <div className={styles.headerHead}>
+          <div className={styles.logo}>logo</div>
+          <div
+            className={styles.navToggle}
+            onClick={() => setIsNavOpen((prev) => !prev)}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div className={`${styles.headerBody} ${isNavOpen ? styles.active : ""}`}>
         <nav>
           <ul className={styles.list}>
             {navLinks.map((link) => (
@@ -588,20 +601,20 @@ function Navbar() {
             ))}
           </ul>
         </nav>
-      </div>
-      <div className={styles.btnGroup}>
-        <Button
-          onClick={() => setTheme("light")}
-          variant={theme === "light" ? "accent" : "neutral"}
-        >
-          Light
-        </Button>
-        <Button
-          onClick={() => setTheme("")}
-          variant={theme === "" ? "accent" : "neutral"}
-        >
-          Dark
-        </Button>
+        <div className={styles.btnGroup}>
+          <Button
+            onClick={() => setTheme("light")}
+            variant={theme === "light" ? "accent" : "neutral"}
+          >
+            Light
+          </Button>
+          <Button
+            onClick={() => setTheme("")}
+            variant={theme === "" ? "accent" : "neutral"}
+          >
+            Dark
+          </Button>
+        </div>
       </div>
     </div>
   );
