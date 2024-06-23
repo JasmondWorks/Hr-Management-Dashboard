@@ -31,7 +31,7 @@ html {
   --clr-bg--2: var(--clr-neutral-800);
   --clr-bg--3: var(--clr-neutral-700);
 
-  --text-base: 1.5rem;
+  --text-base: 1.55rem;
   --text-scale: 1.13;
   --text-body--small: calc(var(--text-base) / var(--text-scale));
   --text-body: var(--text-base);
