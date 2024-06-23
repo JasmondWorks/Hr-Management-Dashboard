@@ -82,6 +82,8 @@ function EmployeeDetails() {
             justifyContent: "space-between",
             alignItems: "flex-end",
             marginBottom: "3.5rem",
+            flexWrap: "wrap",
+            gap: "2rem",
           }}
         >
           <div style={{ display: "flex", gap: "2.5rem" }}>
