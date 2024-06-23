@@ -25,7 +25,7 @@ function App() {
             />
           ))}
         </Routes>
-        <div className="overlay" onClick={() => setIsNavOpen(false)}></div>
+        {/* <div className="overlay" onClick={() => setIsNavOpen(false)}></div> */}
       </BrowserRouter>
     </AppContext.Provider>
   );
