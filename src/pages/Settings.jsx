@@ -2,8 +2,29 @@ import DashboardLayout from "../components/DashboardLayout";
 import TopBar from "../components/TopBar";
 import SwitchToggle from "../components/SwitchToggle";
 import styles from "./Settings.module.css";
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "../App";
 
 function Settings() {
+  const { theme, setTheme } = useContext(AppContext);
+  const [selectedTheme, setSelectedTheme] = useState(theme);
+  console.log(selectedTheme);
+
+  useEffect(() => {
+    setSelectedTheme(theme);
+  }, [theme]);
+
+  useEffect(
+    function () {
+      setTheme(selectedTheme);
+    },
+    [selectedTheme, setTheme]
+  );
+
+  function handleThemeChange(event) {
+    setSelectedTheme(event.target.value);
+  }
+
   return (
     <DashboardLayout>
       <TopBar pryTitle="Settings" secTitle="All System Settings" />
@@ -16,9 +37,9 @@ function Settings() {
                 Customize how your theme looks on your device
               </p>
             </div>
-            <select>
+            <select value={selectedTheme} onChange={handleThemeChange}>
               <option value="light">Light</option>
-              <option value="dark">Dark</option>
+              <option value="">Dark</option>
             </select>
           </div>
           <div className={styles.rowWrapper}>
