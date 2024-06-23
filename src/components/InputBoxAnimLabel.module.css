@@ -40,4 +40,5 @@
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
+  color: var(--clr-accent);
 }
