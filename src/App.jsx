@@ -6,7 +6,7 @@ export const AppContext = createContext();
 
 function App() {
   const [theme, setTheme] = useState("");
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState("");
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
