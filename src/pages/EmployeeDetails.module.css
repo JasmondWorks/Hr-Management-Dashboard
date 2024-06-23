@@ -1,0 +1,10 @@
+.splitWrapper {
+  gap: 3rem;
+}
+@media (min-width: 1024px) {
+  .splitWrapper {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 180px 1fr;
+  }
+}

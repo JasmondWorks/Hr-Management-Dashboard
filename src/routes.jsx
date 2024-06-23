@@ -11,6 +11,11 @@ import Settings from "./pages/Settings";
 import NoPage from "./pages/NoPage.jsx";
 import Login from "./pages/Login.jsx";
 import SignUp from "./pages/SignUp.jsx";
+import ForgotPassword from "./pages/ForgotPassword.jsx";
+import Otp from "./pages/Otp.jsx";
+import AddNewEmployee from "./pages/AddNewEmployee.jsx";
+import EmployeeDetails from "./pages/EmployeeDetails.jsx";
+import DepartmentDetails from "./pages/DepartmentDetails.jsx";
 
 const routes = [
   { path: "/", element: <Dashboard /> },
@@ -25,6 +30,11 @@ const routes = [
   { path: "/settings", element: <Settings /> },
   { path: "/login", element: <Login /> },
   { path: "/signup", element: <SignUp /> },
+  { path: "/forgot-password", element: <ForgotPassword /> },
+  { path: "/otp", element: <Otp /> },
+  { path: "/add-new-employee", element: <AddNewEmployee /> },
+  { path: "/dept-details", element: <DepartmentDetails /> },
+  { path: "/emp-details", element: <EmployeeDetails /> },
   { path: "*", element: <NoPage /> },
 ];
 

@@ -1,13 +1,5 @@
-import TopBar from "./TopBar";
-
 function MainContent({ children }) {
-  return (
-    <main className="flow-content">
-      {/* row */}
-      <TopBar />
-      {children}
-    </main>
-  );
+  return <main className="flow-content">{children}</main>;
 }
 
 export default MainContent;

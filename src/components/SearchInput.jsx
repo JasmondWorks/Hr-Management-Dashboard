@@ -5,6 +5,7 @@ function SearchInput({ styles }) {
         position: "relative",
         display: "flex",
         alignItems: "center",
+        maxWidth: "45rem",
         ...styles,
       }}
     >

@@ -8,10 +8,12 @@ import Badge from "../components/Badge";
 import FlowContent from "../components/layout/FlowContent";
 import Grid from "../components/layout/Grid";
 import Row from "../components/layout/Row";
+import TopBar from "../components/TopBar";
 
 function Dashboard() {
   return (
     <DashboardLayout>
+      <TopBar pryTitle="Hello, Jasmond" secTitle="Good Morning" />
       <Row split="2_5-1_5">
         {/* col */}
         <FlowContent>

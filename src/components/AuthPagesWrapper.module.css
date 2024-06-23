@@ -1,0 +1,14 @@
+.themeSwitcherWrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .themeSwitcherWrapper {
+    justify-content: flex-end;
+  }
+}

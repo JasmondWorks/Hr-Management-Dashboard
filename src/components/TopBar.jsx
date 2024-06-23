@@ -2,12 +2,16 @@ import styles from "./TopBar.module.css";
 
 import Button from "./Button";
 import SearchInput from "./SearchInput";
+import { Link } from "react-router-dom";
 
-function TopBar() {
+function TopBar({ pryTitle = "", secTitle = "" }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.greeting}>
-        <h1>Hello, Jasmond</h1>
+        <h1>{pryTitle}</h1>
+        <div>
+          <small>{secTitle}</small>
+        </div>
       </div>
       <div className={styles.menuWrapper}>
         <SearchInput styles={{ flex: "1" }} />
@@ -34,37 +38,41 @@ function TopBar() {
               />
             </svg>
           </Button>
-          <Button
-            style={{
-              padding: ".5rem",
-              display: "flex",
-              alignItems: "center",
-              gap: "1.5em",
-            }}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: ".3em" }}>
-              <div>X</div>
-              <div style={{ textAlign: "left" }}>
-                <h5>Jasmond</h5>
-                <small>HR Manager</small>
-              </div>
-            </div>
-            <svg
-              width={20}
-              height={20}
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <Button
+              style={{
+                padding: ".5rem",
+                display: "flex",
+                alignItems: "center",
+                gap: "1.5em",
+              }}
             >
-              <path
-                d="M5.83325 8.3335L9.99992 11.6668L14.1666 8.3335"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Button>
+              <div
+                style={{ display: "flex", alignItems: "center", gap: ".3em" }}
+              >
+                <div>X</div>
+                <div style={{ textAlign: "left" }}>
+                  <h5>Jasmond</h5>
+                  <small>HR Manager</small>
+                </div>
+              </div>
+              <svg
+                width={20}
+                height={20}
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.83325 8.3335L9.99992 11.6668L14.1666 8.3335"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

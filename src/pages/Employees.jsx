@@ -1,9 +1,11 @@
 import Badge from "../components/Badge";
 import DashboardLayout from "../components/DashboardLayout";
+import TopBar from "../components/TopBar";
 
 function Employees() {
   return (
     <DashboardLayout>
+      <TopBar pryTitle="All Employees" secTitle="All Employee Information" />
       <div>
         <div className="card">
           <div className="table-wrapper">

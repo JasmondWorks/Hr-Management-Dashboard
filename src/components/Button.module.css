@@ -2,7 +2,7 @@
   cursor: pointer;
   outline: none;
   border: 1px solid var(--clr-border);
-  padding: var(--size--sm) var(--size);
+  padding: var(--size) var(--size--md);
   border-radius: var(--radius);
   -webkit-border-radius: var(--radius);
   -moz-border-radius: var(--radius);
@@ -11,6 +11,8 @@
   line-height: 1;
   color: var(--clr-fg);
   background-color: var(--clr-bg);
+
+  font-size: 1.4rem;
 }
 .square {
   padding: var(--size--sm);

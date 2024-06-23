@@ -1,0 +1,16 @@
+.tab {
+  border-radius: var(--size--sm);
+  -webkit-border-radius: var(--size--sm);
+  -moz-border-radius: var(--size--sm);
+  -ms-border-radius: var(--size--sm);
+  -o-border-radius: var(--size--sm);
+}
+
+.tab:first-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.tab:last-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

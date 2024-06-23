@@ -7,6 +7,7 @@ function Button({
   style,
   onClick,
   size = "",
+  text = "",
 }) {
   return (
     <button
@@ -14,7 +15,7 @@ function Button({
       style={style}
       className={`${styles.btn} ${styles[variant]} ${className} ${styles[size]}`}
     >
-      {children}
+      {text || children}
     </button>
   );
 }
