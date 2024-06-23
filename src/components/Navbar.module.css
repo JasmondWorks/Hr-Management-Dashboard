@@ -106,7 +106,7 @@ body[data-theme="light"] {
 .headerBody.active {
   /* display: block; */
   margin-top: var(--size--md);
-  max-height: 500px;
+  max-height: 1200px;
 }
 @media (min-width: 768px) {
   .wrapper {
