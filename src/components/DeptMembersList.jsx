@@ -40,9 +40,11 @@ function DeptMembersList() {
         }}
       >
         {data.map((el) => (
-          <div
+          <Link
+            to="/emp-details"
             key={el.name}
             style={{
+              textDecoration: "none",
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
@@ -80,7 +82,7 @@ function DeptMembersList() {
                 fill="white"
               />
             </svg>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
