@@ -108,7 +108,8 @@ body[data-theme="light"] {
 :global(body.menu-open) .headerBody {
   /* display: block; */
   margin-top: var(--size--md);
-  max-height: 1200px;
+  max-height: max(350px, 50vh);
+  overflow: auto;
 }
 @media (min-width: 768px) {
   .wrapper {
