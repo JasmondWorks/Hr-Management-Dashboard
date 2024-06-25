@@ -574,7 +574,10 @@ function Navbar() {
 
   useEffect(
     function () {
-      document.body.classList.toggle("menu-open");
+      // document.body.classList.toggle("menu-open");
+
+      if (isNavOpen) document.body.classList.add("menu-open");
+      else document.body.classList.remove("menu-open");
 
       if (isNavOpen) {
         document.addEventListener("keydown", function (e) {
@@ -644,12 +647,12 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <div className={`${styles.headerBody} ${isNavOpen ? styles.active : ""}`}>
+      <div className={`${styles.headerBody}`}>
         <nav>
           <ul className={styles.list}>
             {navLinks.map((link) => (
               <li className={styles.item} key={link.path}>
-                <NavLink to={link.path}>
+                <NavLink to={link.path} onClick={() => setIsNavOpen(false)}>
                   {link.path === pathname ? link.iconActive : link.iconInactive}
                   <span>{link.text}</span>
                 </NavLink>

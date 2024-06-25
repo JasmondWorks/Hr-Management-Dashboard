@@ -80,11 +80,13 @@ body[data-theme="light"] {
 .navToggle {
   display: grid;
   gap: 4px;
+  cursor: pointer;
 }
 .navToggle > div {
   height: 2px;
   width: 18px;
   background-color: #fff;
+  pointer-events: none;
 }
 
 .headerHead {
@@ -103,7 +105,7 @@ body[data-theme="light"] {
   -ms-transition: all 450ms ease;
   -o-transition: all 450ms ease;
 }
-.headerBody.active {
+:global(body.menu-open) .headerBody {
   /* display: block; */
   margin-top: var(--size--md);
   max-height: 1200px;
