@@ -9,8 +9,16 @@ function Jobs() {
     <DashboardLayout>
       <TopBar pryTitle="Jobs" secTitle="Show All Jobs" />
       <div className="card flow-content">
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <SearchInput />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            gap: "var(--size)",
+            flexWrap: "wrap",
+            flex: 1,
+          }}
+        >
+          <SearchInput styles={{ flex: "1" }} />
           <Button variant="accent">Add New Job</Button>
         </div>
         <div className="grid">

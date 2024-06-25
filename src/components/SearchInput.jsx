@@ -5,7 +5,7 @@ function SearchInput({ styles }) {
         position: "relative",
         display: "flex",
         alignItems: "center",
-        maxWidth: "45rem",
+        maxWidth: "40rem",
         ...styles,
       }}
     >
@@ -31,7 +31,7 @@ function SearchInput({ styles }) {
       </svg>
       <input
         placeholder="search..."
-        style={{ width: "100%", paddingLeft: "2.75em" }}
+        style={{ width: "100%", paddingLeft: "2.75em", minWidth: "25rem" }}
         type="text"
       />
     </div>
