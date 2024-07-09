@@ -161,7 +161,7 @@ function Employees() {
                           }}
                         >
                           <img
-                            src={`/public/images/avatars/${emp.profileImg}`}
+                            src={`/images/avatars/${emp.profileImg}`}
                             style={{
                               height: "42px",
                               aspectRatio: "1/1",
