@@ -8,16 +8,14 @@ const {
 } = import.meta.env;
 
 function useEmployees(id = "") {
-  const { data: loggedInAdmin, isLoading: isLoadingLoggedInAdmin } = useFetch(
+  const { data: loggedInAdmin } = useFetch(
     `${apiUrl}/admins/${loggedInAdminId}`,
     []
   );
+  const { data: allEmployees, isLoading: isLoadingAll } = useFetch(
+    `${apiUrl}/employees`
+  );
 
-  // const { data: allEmployees, isLoading: isLoadingAll } = useFetch(
-  //   `${apiUrl}/employees`
-  // );
-  const [allEmployees, setAllEmployees] = useState([]);
-  const [isAllEmployeesLoading, setIsAllEmployeesLoading] = useState(true);
   let employees = allEmployees.filter((emp) =>
     loggedInAdmin.assignedEmployees?.includes(Number(emp.id))
   );
@@ -26,36 +24,25 @@ function useEmployees(id = "") {
     `${apiUrl}/employees/${id}`
   );
 
-  useEffect(() => {
-    async function fetchEmployees() {
-      try {
-        const res = await fetch(`${apiUrl}/employees`);
-        const data = await res.json();
-        setAllEmployees(data);
-      } catch (err) {
-        console.error(err.message);
-      } finally {
-        setIsAllEmployeesLoading(false);
-      }
-    }
-    setTimeout(function () {
-      fetchEmployees();
-    }, fetchDelay);
-  }, [loggedInAdmin]);
-
   // useEffect(() => {
-  //   if (allEmployees.length > 0) {
-  //     setEmployees(
-  //       allEmployees?.filter((emp) =>
-  //         loggedInAdmin.assignedEmployees.includes(Number(emp.id))
-  //       )
-  //     );
+  //   async function fetchEmployees() {
+  //     try {
+  //       const res = await fetch(`${apiUrl}/employees`);
+  //       const data = await res.json();
+  //       setAllEmployees(data);
+  //     } catch (err) {
+  //       console.error(err.message);
+  //     } finally {
+  //       setIsAllEmployeesLoading(false);
+  //     }
   //   }
-  // }, [allEmployees]);
-  // Filter in only logged in admin assigned employees
+  //   setTimeout(function () {
+  //     fetchEmployees();
+  //   }, fetchDelay);
+  // }, [loggedInAdmin]);
 
   if (id) return { employee, isLoadingSingle };
-  return { employees, isLoadingAll: isAllEmployeesLoading };
+  return { employees, isLoadingAll: isLoadingAll };
 }
 
 export default useEmployees;

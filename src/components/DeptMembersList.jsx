@@ -68,7 +68,7 @@ function DeptMembersList({ deptObj, employees }) {
                 }}
               ></div> */}
               <img
-                src={`/public/images/avatars/${el.profileImg}`}
+                src={`/images/avatars/${el.profileImg}`}
                 alt=""
                 style={{
                   height: "40px",

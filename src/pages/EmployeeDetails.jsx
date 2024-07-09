@@ -106,7 +106,7 @@ function EmployeeDetails() {
             }}
           >
             <img
-              src={`/public/images/avatars/${employee.profileImg}`}
+              src={`/images/avatars/${employee.profileImg}`}
               alt="profile image"
               style={{
                 width: "80px",
