@@ -1,6 +1,6 @@
 .top,
 .bottom {
-  padding: var(--size--sm);
+  padding: var(--size);
   border: 1px solid var(--clr-border);
 }
 .top {

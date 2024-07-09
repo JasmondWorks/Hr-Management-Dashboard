@@ -37,9 +37,9 @@ function Settings() {
                 Customize how your theme looks on your device
               </p>
             </div>
-            <select value={selectedTheme} onChange={handleThemeChange}>
+            <select disabled value={selectedTheme} onChange={handleThemeChange}>
               <option value="light">Light</option>
-              <option value="">Dark</option>
+              <option value="dark">Dark</option>
             </select>
           </div>
           <div className={styles.rowWrapper}>

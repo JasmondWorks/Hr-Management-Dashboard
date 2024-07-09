@@ -3,8 +3,16 @@ import styles from "./TopBar.module.css";
 import Button from "./Button";
 import SearchInput from "./SearchInput";
 import { Link } from "react-router-dom";
+import useFetch from "../hooks/useFetch";
+
+const apiUrl = import.meta.env.VITE_DB_BASE_URL;
+const loggedInAdminId = import.meta.env.VITE_LOGGED_IN_ADMIN_ID;
 
 function TopBar({ pryTitle = "", secTitle = "" }) {
+  const { data: loggedInAdmin } = useFetch(
+    `${apiUrl}/admins/${loggedInAdminId}`
+  );
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.greeting}>
@@ -16,7 +24,7 @@ function TopBar({ pryTitle = "", secTitle = "" }) {
       <div className={styles.menuWrapper}>
         <SearchInput styles={{ flex: "1" }} />
         <div className={styles.btnWrapper}>
-          <Button size="square">
+          <Button style={{ aspectRatio: "1/1" }} size="square">
             <svg
               width={24}
               height={24}
@@ -45,6 +53,7 @@ function TopBar({ pryTitle = "", secTitle = "" }) {
                 display: "flex",
                 alignItems: "center",
                 gap: "1.5em",
+                height: "100%",
               }}
             >
               <div

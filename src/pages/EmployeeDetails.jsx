@@ -1,6 +1,6 @@
 import styles from "./EmployeeDetails.module.css";
 
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import DashboardLayout from "../components/DashboardLayout";
 import TopBar from "../components/TopBar";
 import Tabs from "../components/Tabs";
@@ -8,6 +8,8 @@ import { useState } from "react";
 import Button from "../components/Button";
 import UploadFile from "../components/UploadFile";
 import Badge from "../components/Badge";
+import useEmployees from "../hooks/useEmployees";
+import Loader from "../components/Loader";
 
 const tabsData = [
   {
@@ -50,13 +52,23 @@ function EmployeeDetails() {
   const [selectedTab, setSelectedTab] = useState(
     tabsData[0].text.toLowerCase()
   );
+  const { id: employeeId } = useParams();
+  const { employee, isLoadingSingle } = useEmployees(employeeId);
+
+  if (isLoadingSingle) return <Loader />;
+
   return (
     <DashboardLayout>
       <TopBar
-        pryTitle="Dina Coneva"
+        pryTitle={`${employee.firstname} ${employee.lastname}`}
         secTitle={
-          <div>
-            <Link to="/employees">All Employee</Link>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Link
+              style={{ textDecoration: "none", color: "var(--clr-accent)" }}
+              to="/employees"
+            >
+              All Employee
+            </Link>
             <svg
               width={24}
               height={24}
@@ -71,7 +83,7 @@ function EmployeeDetails() {
                 fill="white"
               />
             </svg>
-            <span>Dina Coneva</span>
+            <span>{`${employee.firstname} ${employee.lastname}`}</span>
           </div>
         }
       />
@@ -86,21 +98,30 @@ function EmployeeDetails() {
             gap: "2rem",
           }}
         >
-          <div style={{ display: "flex", gap: "2.5rem" }}>
-            <div
+          <div
+            style={{
+              display: "flex",
+              gap: "2.5rem",
+              flexWrap: "wrap",
+            }}
+          >
+            <img
+              src={`/public/images/avatars/${employee.profileImg}`}
+              alt="profile image"
               style={{
                 width: "80px",
                 aspectRatio: "1/1",
                 backgroundColor: "var(--clr-border)",
+                objectFit: "cover",
               }}
-            ></div>
+            />
             <div>
-              <h3>Dina Coneva</h3>
+              <h3>{`${employee.firstname} ${employee.lastname}`}</h3>
               <p>
-                <small>Project Manager</small>
+                <small>{employee.designation}</small>
               </p>
               <p>
-                <small>dina.c@gmail.com</small>
+                <small>{employee.email}</small>
               </p>
             </div>
           </div>
@@ -130,7 +151,6 @@ function EmployeeDetails() {
     </DashboardLayout>
   );
 }
-
 function ProfileContent() {
   const [selectedTab2, setSelectedTab2] = useState(
     tabsData2[0].text.toLowerCase()
@@ -307,12 +327,47 @@ function ProfileContent() {
     </div>
   );
 }
-
 function AttendanceContent() {
   return (
     <>
       <div className="table-wrapper">
         <table>
+          <thead>
+            <tr>
+              <th>Employee Name</th>
+              <th>Designation</th>
+              <th>Type</th>
+              <th>Check In Time</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Array.from({ length: 7 }).map((el, index) => (
+              <tr key={index}>
+                <td>Dina</td>
+                <td>Team Lead - Design</td>
+                <td>Office</td>
+                <td>09:27 AM</td>
+                <td>
+                  <Badge
+                    style={{ fontSize: "1rem" }}
+                    text="On Time"
+                    variant="success"
+                  />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
+}
+function ProjectsContent() {
+  return (
+    <div className="table-wrapper">
+      <table>
+        <thead>
           <tr>
             <th>Employee Name</th>
             <th>Designation</th>
@@ -320,9 +375,11 @@ function AttendanceContent() {
             <th>Check In Time</th>
             <th>Status</th>
           </tr>
+        </thead>
+        <tbody>
           {Array.from({ length: 7 }).map((el, index) => (
             <tr key={index}>
-              <td>Dina</td>
+              <td>{employee.firstname}</td>
               <td>Team Lead - Design</td>
               <td>Office</td>
               <td>09:27 AM</td>
@@ -335,37 +392,7 @@ function AttendanceContent() {
               </td>
             </tr>
           ))}
-        </table>
-      </div>
-    </>
-  );
-}
-function ProjectsContent() {
-  return (
-    <div className="table-wrapper">
-      <table>
-        <tr>
-          <th>Employee Name</th>
-          <th>Designation</th>
-          <th>Type</th>
-          <th>Check In Time</th>
-          <th>Status</th>
-        </tr>
-        {Array.from({ length: 7 }).map((el, index) => (
-          <tr key={index}>
-            <td>Dina</td>
-            <td>Team Lead - Design</td>
-            <td>Office</td>
-            <td>09:27 AM</td>
-            <td>
-              <Badge
-                style={{ fontSize: "1rem" }}
-                text="On Time"
-                variant="success"
-              />
-            </td>
-          </tr>
-        ))}
+        </tbody>
       </table>
     </div>
   );

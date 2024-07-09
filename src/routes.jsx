@@ -34,7 +34,7 @@ const routes = [
   { path: "/otp", element: <Otp /> },
   { path: "/add-new-employee", element: <AddNewEmployee /> },
   { path: "/dept-details", element: <DepartmentDetails /> },
-  { path: "/emp-details", element: <EmployeeDetails /> },
+  { path: "/employees/:id", element: <EmployeeDetails /> },
   { path: "*", element: <NoPage /> },
 ];
 

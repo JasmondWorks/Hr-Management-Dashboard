@@ -4,8 +4,14 @@ import Button from "../components/Button";
 import DashboardLayout from "../components/DashboardLayout";
 import SearchInput from "../components/SearchInput";
 import TopBar from "../components/TopBar";
+import useEmployees from "../hooks/useEmployees";
+import Loader from "../components/Loader";
 
 function Employees() {
+  const { employees, isLoadingAll } = useEmployees();
+
+  if (isLoadingAll) return <Loader />;
+
   return (
     <DashboardLayout>
       <TopBar pryTitle="All Employees" secTitle="All Employee Information" />
@@ -130,32 +136,57 @@ function Employees() {
           </div>
           <div className="table-wrapper">
             <table>
-              <tr>
-                <th>Employee Name</th>
-                <th>Designation</th>
-                <th>Type</th>
-                <th>Check In Time</th>
-                <th>Status</th>
-              </tr>
-              {Array.from({ length: 7 }).map((el, index) => (
-                <tr key={index}>
-                  <td>
-                    <Link style={{ textDecoration: "none" }} to="/emp-details">
-                      Dina
-                    </Link>
-                  </td>
-                  <td>Team Lead - Design</td>
-                  <td>Office</td>
-                  <td>09:27 AM</td>
-                  <td>
-                    <Badge
-                      style={{ fontSize: "1rem" }}
-                      text="On Time"
-                      variant="success"
-                    />
-                  </td>
+              <thead>
+                <tr>
+                  <th>Employee Name</th>
+                  <th>Designation</th>
+                  <th>Type</th>
+                  <th>Check In Time</th>
+                  <th>Status</th>
                 </tr>
-              ))}
+              </thead>
+              <tbody>
+                {employees.map((emp, index) => (
+                  <tr key={index}>
+                    <td>
+                      <Link
+                        style={{ textDecoration: "none" }}
+                        to={`/employees/${emp.id}`}
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "1rem",
+                          }}
+                        >
+                          <img
+                            src={`/public/images/avatars/${emp.profileImg}`}
+                            style={{
+                              height: "42px",
+                              aspectRatio: "1/1",
+                              objectFit: "cover",
+                              borderRadius: "50%",
+                            }}
+                            alt=""
+                          />
+                          <span>{emp.firstname}</span>
+                        </div>
+                      </Link>
+                    </td>
+                    <td>{emp.designation}</td>
+                    <td>{emp.type[0].toUpperCase() + emp.type.slice(1)}</td>
+                    <td>09:27 AM</td>
+                    <td>
+                      <Badge
+                        style={{ fontSize: "1rem" }}
+                        text="On Time"
+                        variant="success"
+                      />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </div>
         </div>

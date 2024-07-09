@@ -1,0 +1,203 @@
+.laBallGridBeat,
+.laBallGridBeat > div {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.laBallGridBeat {
+  display: block;
+  font-size: 0;
+  color: #fff;
+}
+.laBallGridBeat.la-dark {
+  color: #333;
+}
+.laBallGridBeat > div {
+  display: inline-block;
+  float: none;
+  background-color: currentColor;
+  border: 0 solid currentColor;
+}
+.laBallGridBeat {
+  width: 36px;
+  height: 36px;
+}
+.laBallGridBeat > div {
+  width: 8px;
+  height: 8px;
+  margin: 2px;
+  border-radius: 100%;
+  -webkit-animation-name: ball-grid-beat;
+  -moz-animation-name: ball-grid-beat;
+  -o-animation-name: ball-grid-beat;
+  animation-name: ball-grid-beat;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.laBallGridBeat > div:nth-child(1) {
+  -webkit-animation-duration: 0.65s;
+  -moz-animation-duration: 0.65s;
+  -o-animation-duration: 0.65s;
+  animation-duration: 0.65s;
+  -webkit-animation-delay: 0.03s;
+  -moz-animation-delay: 0.03s;
+  -o-animation-delay: 0.03s;
+  animation-delay: 0.03s;
+}
+.laBallGridBeat > div:nth-child(2) {
+  -webkit-animation-duration: 1.02s;
+  -moz-animation-duration: 1.02s;
+  -o-animation-duration: 1.02s;
+  animation-duration: 1.02s;
+  -webkit-animation-delay: 0.09s;
+  -moz-animation-delay: 0.09s;
+  -o-animation-delay: 0.09s;
+  animation-delay: 0.09s;
+}
+.laBallGridBeat > div:nth-child(3) {
+  -webkit-animation-duration: 1.06s;
+  -moz-animation-duration: 1.06s;
+  -o-animation-duration: 1.06s;
+  animation-duration: 1.06s;
+  -webkit-animation-delay: -0.69s;
+  -moz-animation-delay: -0.69s;
+  -o-animation-delay: -0.69s;
+  animation-delay: -0.69s;
+}
+.laBallGridBeat > div:nth-child(4) {
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: -0.41s;
+  -moz-animation-delay: -0.41s;
+  -o-animation-delay: -0.41s;
+  animation-delay: -0.41s;
+}
+.laBallGridBeat > div:nth-child(5) {
+  -webkit-animation-duration: 1.6s;
+  -moz-animation-duration: 1.6s;
+  -o-animation-duration: 1.6s;
+  animation-duration: 1.6s;
+  -webkit-animation-delay: 0.04s;
+  -moz-animation-delay: 0.04s;
+  -o-animation-delay: 0.04s;
+  animation-delay: 0.04s;
+}
+.laBallGridBeat > div:nth-child(6) {
+  -webkit-animation-duration: 0.84s;
+  -moz-animation-duration: 0.84s;
+  -o-animation-duration: 0.84s;
+  animation-duration: 0.84s;
+  -webkit-animation-delay: 0.07s;
+  -moz-animation-delay: 0.07s;
+  -o-animation-delay: 0.07s;
+  animation-delay: 0.07s;
+}
+.laBallGridBeat > div:nth-child(7) {
+  -webkit-animation-duration: 0.68s;
+  -moz-animation-duration: 0.68s;
+  -o-animation-duration: 0.68s;
+  animation-duration: 0.68s;
+  -webkit-animation-delay: -0.66s;
+  -moz-animation-delay: -0.66s;
+  -o-animation-delay: -0.66s;
+  animation-delay: -0.66s;
+}
+.laBallGridBeat > div:nth-child(8) {
+  -webkit-animation-duration: 0.93s;
+  -moz-animation-duration: 0.93s;
+  -o-animation-duration: 0.93s;
+  animation-duration: 0.93s;
+  -webkit-animation-delay: -0.76s;
+  -moz-animation-delay: -0.76s;
+  -o-animation-delay: -0.76s;
+  animation-delay: -0.76s;
+}
+.laBallGridBeat > div:nth-child(9) {
+  -webkit-animation-duration: 1.24s;
+  -moz-animation-duration: 1.24s;
+  -o-animation-duration: 1.24s;
+  animation-duration: 1.24s;
+  -webkit-animation-delay: -0.76s;
+  -moz-animation-delay: -0.76s;
+  -o-animation-delay: -0.76s;
+  animation-delay: -0.76s;
+}
+.laBallGridBeat.la-sm {
+  width: 18px;
+  height: 18px;
+}
+.laBallGridBeat.la-sm > div {
+  width: 4px;
+  height: 4px;
+  margin: 1px;
+}
+.laBallGridBeat.la-2x {
+  width: 72px;
+  height: 72px;
+}
+.laBallGridBeat.la-2x > div {
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+}
+.laBallGridBeat.la-3x {
+  width: 108px;
+  height: 108px;
+}
+.laBallGridBeat.la-3x > div {
+  width: 24px;
+  height: 24px;
+  margin: 6px;
+}
+/*
+ * Animation
+ */
+@-webkit-keyframes ball-grid-beat {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes ball-grid-beat {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes ball-grid-beat {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes ball-grid-beat {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 1;
+  }
+}

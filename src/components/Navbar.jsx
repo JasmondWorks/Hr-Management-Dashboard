@@ -662,14 +662,15 @@ function Navbar() {
         </nav>
         <div className={styles.btnGroup}>
           <Button
+            style={{ pointerEvents: "none", opacity: 0.4 }}
             onClick={() => setTheme("light")}
             variant={theme === "light" ? "accent" : "neutral"}
           >
             Light
           </Button>
           <Button
-            onClick={() => setTheme("")}
-            variant={theme === "" ? "accent" : "neutral"}
+            onClick={() => setTheme("dark")}
+            variant={theme === "dark" ? "accent" : "neutral"}
           >
             Dark
           </Button>

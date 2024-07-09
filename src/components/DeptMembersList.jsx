@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom";
+import useEmployees from "../hooks/useEmployees";
 
-const data = [
-  { name: "Evghenii Corev", role: "Lead UI/UX Designer" },
-  { name: "Evghenii Corev", role: "Lead UI/UX Designer" },
-  { name: "Evghenii Corev", role: "Lead UI/UX Designer" },
-  { name: "Evghenii Corev", role: "Lead UI/UX Designer" },
-  { name: "Evghenii Corev", role: "Lead UI/UX Designer" },
-];
-function DeptMembersList() {
+function DeptMembersList({ deptObj, employees }) {
+  // console.log(employees);
+
+  const deptMembers = employees.filter((emp) =>
+    deptObj.members.includes(emp.id)
+  );
+  console.log(deptMembers);
   return (
-    <div className="card" style={{ display: "grid", gap: "2rem" }}>
+    <div
+      className="card"
+      style={{ display: "grid", gap: "2rem", gridTemplateRows: "auto 1fr" }}
+    >
       <div
         style={{
           display: "flex",
@@ -21,14 +24,19 @@ function DeptMembersList() {
         }}
       >
         <div>
-          <h5>Design Department</h5>
+          <h5>{deptObj.name}</h5>
           <p>
-            <small>20 Members</small>
+            <small>
+              {deptObj.members.length} Member
+              {deptObj.members.length > 1 && "s"}
+            </small>
           </p>
         </div>
-        <Link style={{ color: "var(--clr-accent)", textDecoration: "none" }}>
-          View All
-        </Link>
+        {deptObj.members.length > 6 && (
+          <Link style={{ color: "var(--clr-accent)", textDecoration: "none" }}>
+            View All
+          </Link>
+        )}
       </div>
       <div
         style={{
@@ -37,12 +45,13 @@ function DeptMembersList() {
           maxHeight: "25rem",
           overflowY: "auto",
           paddingBlock: "1rem",
+          alignItems: "start",
         }}
       >
-        {data.map((el) => (
+        {deptMembers.map((el) => (
           <Link
-            to="/emp-details"
-            key={el.name}
+            to={`/employees/${el.id}`}
+            key={crypto.randomUUID()}
             style={{
               textDecoration: "none",
               display: "flex",
@@ -53,24 +62,32 @@ function DeptMembersList() {
             }}
           >
             <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-              <div
+              {/* <div
+                style={{
+                  
+                }}
+              ></div> */}
+              <img
+                src={`/public/images/avatars/${el.profileImg}`}
+                alt=""
                 style={{
                   height: "40px",
                   aspectRatio: "1/1",
                   backgroundColor: "var(--clr-border)",
                   borderRadius: "50%",
+                  objectFit: "cover",
                 }}
-              ></div>
+              />
               <div>
-                <p>{el.name}</p>
+                <p>{el.firstname}</p>
                 <p>
-                  <small>{el.role}</small>
+                  <small>{el.designation}</small>
                 </p>
               </div>
             </div>
             <svg
-              width="{24}"
-              height="{24}"
+              width={24}
+              height={24}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

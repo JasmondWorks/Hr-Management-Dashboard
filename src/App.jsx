@@ -5,10 +5,11 @@ import { createContext, useEffect, useState } from "react";
 export const AppContext = createContext();
 
 function App() {
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
   const [isNavOpen, setIsNavOpen] = useState("");
 
   useEffect(() => {
+    localStorage.setItem("theme", theme);
     document.body.setAttribute("data-theme", theme);
   }, [theme]);
 

@@ -10,38 +10,42 @@ function Holidays() {
         <div className="card">
           <div className="table-wrapper">
             <table>
-              <tr style={{ padding: "1rem" }}>
-                <th>Employee Name</th>
-                <th>Designation</th>
-                <th>Type</th>
-                <th>Check In Time</th>
-                <th>Status</th>
-              </tr>
-              {Array.from({ length: 7 }).map((el, index) => (
-                <tr key={index}>
-                  <td
-                    style={{
-                      borderLeft: "4px solid var(--clr-border)",
-                      paddingLeft: "1.35rem",
-                      paddingBlock: "1.35rem",
-                    }}
-                  >
-                    Dina
-                  </td>
-                  <td style={{ paddingBlock: "1.35rem" }}>
-                    Team Lead - Design
-                  </td>
-                  <td style={{ paddingBlock: "1.35rem" }}>Office</td>
-                  <td style={{ paddingBlock: "1.35rem" }}>09:27 AM</td>
-                  <td style={{ paddingBlock: "1.35rem" }}>
-                    <Badge
-                      style={{ fontSize: "1rem" }}
-                      text="On Time"
-                      variant="success"
-                    />
-                  </td>
+              <thead>
+                <tr style={{ padding: "1rem" }}>
+                  <th>Employee Name</th>
+                  <th>Designation</th>
+                  <th>Type</th>
+                  <th>Check In Time</th>
+                  <th>Status</th>
                 </tr>
-              ))}
+              </thead>
+              <tbody>
+                {Array.from({ length: 7 }).map((el, index) => (
+                  <tr key={index}>
+                    <td
+                      style={{
+                        borderLeft: "4px solid var(--clr-border)",
+                        paddingLeft: "1.35rem",
+                        paddingBlock: "1.35rem",
+                      }}
+                    >
+                      Dina
+                    </td>
+                    <td style={{ paddingBlock: "1.35rem" }}>
+                      Team Lead - Design
+                    </td>
+                    <td style={{ paddingBlock: "1.35rem" }}>Office</td>
+                    <td style={{ paddingBlock: "1.35rem" }}>09:27 AM</td>
+                    <td style={{ paddingBlock: "1.35rem" }}>
+                      <Badge
+                        style={{ fontSize: "1rem" }}
+                        text="On Time"
+                        variant="success"
+                      />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </div>
         </div>

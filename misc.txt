@@ -1,0 +1,3 @@
+"activeJobs": ["job1", "job2", "job3"],
+  "inactiveJobs": ["job1", "job4", "job5"],
+  "completedJobs": ["job6", "job3"],

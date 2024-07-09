@@ -94,14 +94,14 @@ body {
 }
 @media (min-width: 768px) {
   :root {
-    --text-base: 1.6rem;
     --radius: var(--size);
   }
 }
-/* @media (min-width: 1024px) {
+@media (min-width: 1024px) {
   :root {
+    --text-base: 1.7rem;
   }
-} */
+}
 body[data-theme="light"] {
   --clr-fg: var(--clr-neutral-700);
   --clr-bg: var(--clr-white);
@@ -160,6 +160,7 @@ option {
   font-weight: inherit;
   line-height: 1;
 }
+
 button,
 input {
   border: none;
@@ -182,6 +183,12 @@ select {
   -moz-border-radius: var(--radius);
   -ms-border-radius: var(--radius);
   -o-border-radius: var(--radius);
+}
+select {
+  width: fit-content;
+}
+form select {
+  width: 100%;
 }
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -267,7 +274,7 @@ td {
     padding-right: 0;
   }
   .app-wrapper > :nth-child(2) {
-    margin-left: 270px;
+    margin-left: 300px;
   }
 
   main {
@@ -314,4 +321,7 @@ body.menu-open .overlay {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 999;
+}
+.block-middle {
+  margin-inline: auto;
 }
