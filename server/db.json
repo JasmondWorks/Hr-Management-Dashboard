@@ -1,1 +1,796 @@
-{}
+{
+  "admins": [
+    {
+      "id": 1,
+      "name": "Jasmond",
+      "assignedEmployees": [1, 2, 3, 4, 5, 6]
+    },
+    {
+      "id": 2,
+      "name": "Jane",
+      "assignedEmployees": [2, 5, 6, 8]
+    },
+    {
+      "id": 3,
+      "name": "Joe",
+      "assignedEmployees": [1, 3, 4, 5, 2]
+    },
+    {
+      "id": 4,
+      "name": "Steph",
+      "assignedEmployees": [1, 2, 3, 5, 6, 8]
+    },
+    {
+      "id": 5,
+      "name": "Blanque",
+      "assignedEmployees": [2, 3, 4, 5, 6, 8]
+    },
+    {
+      "id": 6,
+      "name": "Samuel",
+      "assignedEmployees": [2, 4, 6, 7]
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "firstname": "John",
+      "lastname": "Doe",
+      "phoneNum": "+1234567890",
+      "email": "john.doe@example.com",
+      "dateOfBirth": "1985-06-15T00:00:00Z",
+      "gender": "Male",
+      "department": "Development",
+      "designation": "React JS Developer",
+      "type": "hybrid",
+      "joiningDate": "2018-05-15T00:00:00Z",
+      "status": "full-time",
+      "skypeId": "john.doe.skype",
+      "slackId": "@johndoe",
+      "githubId": "johndoe",
+      "profileImg": "pexels-italo-melo-881954-2379004.jpg",
+      "attendance": [
+        {
+          "date": "2023-06-25",
+          "checkIn": "2023-06-25T08:00:00Z",
+          "checkOut": "2023-06-25T17:00:00Z",
+          "breakTime": "2023-06-25T12:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-26",
+          "checkIn": "2023-06-26T08:05:00Z",
+          "checkOut": "2023-06-26T17:10:00Z",
+          "breakTime": "2023-06-26T12:05:00Z",
+          "duration": "PT8H5M",
+          "numberOfWorkingHours": 8.083
+        },
+        {
+          "date": "2023-06-27",
+          "checkIn": "2023-06-27T08:15:00Z",
+          "checkOut": "2023-06-27T17:20:00Z",
+          "breakTime": "2023-06-27T12:10:00Z",
+          "duration": "PT8H5M",
+          "numberOfWorkingHours": 8.083
+        },
+        {
+          "date": "2023-06-28",
+          "checkIn": "2023-06-28T08:30:00Z",
+          "checkOut": "2023-06-28T17:30:00Z",
+          "breakTime": "2023-06-28T12:30:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-29",
+          "checkIn": "2023-06-29T08:00:00Z",
+          "checkOut": "2023-06-29T17:00:00Z",
+          "breakTime": "2023-06-29T12:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        }
+      ],
+      "projects": [
+        {
+          "name": "Project Alpha",
+          "startDate": "2018-07-01T00:00:00Z",
+          "finishDate": "2019-01-01T00:00:00Z"
+        },
+        {
+          "name": "Project Beta",
+          "startDate": "2019-02-01T00:00:00Z",
+          "finishDate": null
+        }
+      ],
+      "leave": [
+        {
+          "requestDate": "2022-05-01T00:00:00Z",
+          "startDate": "2022-05-15T00:00:00Z",
+          "endDate": "2022-05-20T00:00:00Z",
+          "status": "approved"
+        },
+        {
+          "requestDate": "2022-06-10T00:00:00Z",
+          "startDate": "2022-07-01T00:00:00Z",
+          "endDate": "2022-07-05T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "requestDate": "2023-05-01T00:00:00Z",
+          "startDate": "2023-05-15T00:00:00Z",
+          "endDate": "2023-05-20T00:00:00Z",
+          "status": "approved"
+        },
+        {
+          "requestDate": "2023-06-10T00:00:00Z",
+          "startDate": "2023-07-01T00:00:00Z",
+          "endDate": "2023-07-05T00:00:00Z",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "phoneNum": "+0987654321",
+      "email": "jane.smith@example.com",
+      "dateOfBirth": "1990-03-25T00:00:00Z",
+      "gender": "Female",
+      "department": "Design",
+      "designation": "Graphic Designer",
+      "type": "remote",
+      "joiningDate": "2019-03-10T00:00:00Z",
+      "status": "part-time",
+      "skypeId": "jane.smith.skype",
+      "slackId": "@janesmith",
+      "githubId": "janesmith",
+      "profileImg": "pexels-tomaz-barcellos-999425-1987301.jpg",
+      "attendance": [
+        {
+          "date": "2023-06-25",
+          "checkIn": "2023-06-25T09:00:00Z",
+          "checkOut": "2023-06-25T18:00:00Z",
+          "breakTime": "2023-06-25T13:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-26",
+          "checkIn": "2023-06-26T09:15:00Z",
+          "checkOut": "2023-06-26T18:20:00Z",
+          "breakTime": "2023-06-26T13:10:00Z",
+          "duration": "PT8H5M",
+          "numberOfWorkingHours": 8.083
+        },
+        {
+          "date": "2023-06-27",
+          "checkIn": "2023-06-27T09:30:00Z",
+          "checkOut": "2023-06-27T18:30:00Z",
+          "breakTime": "2023-06-27T13:30:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-28",
+          "checkIn": "2023-06-28T09:45:00Z",
+          "checkOut": "2023-06-28T18:45:00Z",
+          "breakTime": "2023-06-28T13:45:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-29",
+          "checkIn": "2023-06-29T09:00:00Z",
+          "checkOut": "2023-06-29T18:00:00Z",
+          "breakTime": "2023-06-29T13:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        }
+      ],
+      "projects": [
+        {
+          "name": "Project Gamma",
+          "startDate": "2019-04-01T00:00:00Z",
+          "finishDate": "2020-01-01T00:00:00Z"
+        },
+        {
+          "name": "Project Delta",
+          "startDate": "2020-02-01T00:00:00Z",
+          "finishDate": null
+        }
+      ],
+      "leave": [
+        {
+          "requestDate": "2022-05-10T00:00:00Z",
+          "startDate": "2022-05-25T00:00:00Z",
+          "endDate": "2022-05-30T00:00:00Z",
+          "status": "approved"
+        },
+        {
+          "requestDate": "2022-06-20T00:00:00Z",
+          "startDate": "2022-07-10T00:00:00Z",
+          "endDate": "2022-07-15T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "requestDate": "2023-05-10T00:00:00Z",
+          "startDate": "2023-05-25T00:00:00Z",
+          "endDate": "2023-05-30T00:00:00Z",
+          "status": "approved"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "firstname": "Michael",
+      "lastname": "Johnson",
+      "phoneNum": "+1122334455",
+      "email": "michael.johnson@example.com",
+      "dateOfBirth": "1988-09-30T00:00:00Z",
+      "gender": "Male",
+      "department": "Marketing",
+      "designation": "Marketing Manager",
+      "type": "hybrid",
+      "joiningDate": "2017-08-20T00:00:00Z",
+      "status": "full-time",
+      "skypeId": "michael.johnson.skype",
+      "slackId": "@michaeljohnson",
+      "githubId": "michaeljohnson",
+      "profileImg": "alex-suprun-ZHvM3XIOHoE-unsplash.jpg",
+      "attendance": [
+        {
+          "date": "2023-06-25",
+          "checkIn": "2023-06-25T08:30:00Z",
+          "checkOut": "2023-06-25T17:30:00Z",
+          "breakTime": "2023-06-25T12:30:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-26",
+          "checkIn": "2023-06-26T08:45:00Z",
+          "checkOut": "2023-06-26T17:45:00Z",
+          "breakTime": "2023-06-26T12:45:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-27",
+          "checkIn": "2023-06-27T09:00:00Z",
+          "checkOut": "2023-06-27T18:00:00Z",
+          "breakTime": "2023-06-27T13:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-28",
+          "checkIn": "2023-06-28T09:15:00Z",
+          "checkOut": "2023-06-28T18:15:00Z",
+          "breakTime": "2023-06-28T13:15:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-29",
+          "checkIn": "2023-06-29T09:30:00Z",
+          "checkOut": "2023-06-29T18:30:00Z",
+          "breakTime": "2023-06-29T13:30:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        }
+      ],
+      "projects": [
+        {
+          "name": "Project Delta",
+          "startDate": "2017-10-01T00:00:00Z",
+          "finishDate": "2018-05-01T00:00:00Z"
+        },
+        {
+          "name": "Project Epsilon",
+          "startDate": "2018-06-01T00:00:00Z",
+          "finishDate": null
+        }
+      ],
+      "leave": [
+        {
+          "requestDate": "2022-07-01T00:00:00Z",
+          "startDate": "2022-07-15T00:00:00Z",
+          "endDate": "2022-07-20T00:00:00Z",
+          "status": "approved"
+        },
+        {
+          "requestDate": "2022-08-10T00:00:00Z",
+          "startDate": "2022-09-01T00:00:00Z",
+          "endDate": "2022-09-05T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "requestDate": "2023-07-01T00:00:00Z",
+          "startDate": "2023-07-15T00:00:00Z",
+          "endDate": "2023-07-20T00:00:00Z",
+          "status": "approved"
+        },
+        {
+          "requestDate": "2023-08-10T00:00:00Z",
+          "startDate": "2023-09-01T00:00:00Z",
+          "endDate": "2023-09-05T00:00:00Z",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "firstname": "Emily",
+      "lastname": "Brown",
+      "phoneNum": "+1555098723",
+      "email": "emily.brown@example.com",
+      "dateOfBirth": "1987-02-10T00:00:00Z",
+      "gender": "Female",
+      "department": "HR",
+      "designation": "HR Manager",
+      "type": "hybrid",
+      "joiningDate": "2016-09-05T00:00:00Z",
+      "status": "full-time",
+      "skypeId": "emily.brown.skype",
+      "slackId": "@emilybrown",
+      "githubId": "emilybrown",
+      "profileImg": "pexels-vinicius-wiesehofer-289347-1130626.jpg",
+      "attendance": [
+        {
+          "date": "2023-06-25",
+          "checkIn": "2023-06-25T08:00:00Z",
+          "checkOut": "2023-06-25T17:00:00Z",
+          "breakTime": "2023-06-25T12:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-26",
+          "checkIn": "2023-06-26T08:00:00Z",
+          "checkOut": "2023-06-26T17:00:00Z",
+          "breakTime": "2023-06-26T12:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-27",
+          "checkIn": "2023-06-27T08:00:00Z",
+          "checkOut": "2023-06-27T17:00:00Z",
+          "breakTime": "2023-06-27T12:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-28",
+          "checkIn": "2023-06-28T08:00:00Z",
+          "checkOut": "2023-06-28T17:00:00Z",
+          "breakTime": "2023-06-28T12:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-29",
+          "checkIn": "2023-06-29T08:00:00Z",
+          "checkOut": "2023-06-29T17:00:00Z",
+          "breakTime": "2023-06-29T12:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        }
+      ],
+      "projects": [
+        {
+          "name": "Project Zeta",
+          "startDate": "2016-10-01T00:00:00Z",
+          "finishDate": "2017-05-01T00:00:00Z"
+        },
+        {
+          "name": "Project Eta",
+          "startDate": "2017-06-01T00:00:00Z",
+          "finishDate": null
+        }
+      ],
+      "leave": [
+        {
+          "requestDate": "2022-08-01T00:00:00Z",
+          "startDate": "2022-08-15T00:00:00Z",
+          "endDate": "2022-08-20T00:00:00Z",
+          "status": "approved"
+        },
+        {
+          "requestDate": "2022-09-10T00:00:00Z",
+          "startDate": "2022-10-01T00:00:00Z",
+          "endDate": "2022-10-05T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "requestDate": "2023-08-01T00:00:00Z",
+          "startDate": "2023-08-15T00:00:00Z",
+          "endDate": "2023-08-20T00:00:00Z",
+          "status": "approved"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "firstname": "William",
+      "lastname": "Martinez",
+      "phoneNum": "+1234509876",
+      "email": "william.martinez@example.com",
+      "dateOfBirth": "1986-11-12T00:00:00Z",
+      "gender": "Male",
+      "department": "Sales",
+      "designation": "Sales Executive",
+      "type": "full-time",
+      "joiningDate": "2015-07-10T00:00:00Z",
+      "status": "full-time",
+      "skypeId": "william.martinez.skype",
+      "slackId": "@williammartinez",
+      "githubId": "williammartinez",
+      "profileImg": "pexels-chloekalaartist-1043471.jpg",
+      "attendance": [
+        {
+          "date": "2023-06-25",
+          "checkIn": "2023-06-25T08:30:00Z",
+          "checkOut": "2023-06-25T17:30:00Z",
+          "breakTime": "2023-06-25T12:30:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-26",
+          "checkIn": "2023-06-26T08:45:00Z",
+          "checkOut": "2023-06-26T17:45:00Z",
+          "breakTime": "2023-06-26T12:45:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-27",
+          "checkIn": "2023-06-27T09:00:00Z",
+          "checkOut": "2023-06-27T18:00:00Z",
+          "breakTime": "2023-06-27T13:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-28",
+          "checkIn": "2023-06-28T09:15:00Z",
+          "checkOut": "2023-06-28T18:15:00Z",
+          "breakTime": "2023-06-28T13:15:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-29",
+          "checkIn": "2023-06-29T09:30:00Z",
+          "checkOut": "2023-06-29T18:30:00Z",
+          "breakTime": "2023-06-29T13:30:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        }
+      ],
+      "projects": [
+        {
+          "name": "Project Theta",
+          "startDate": "2015-08-01T00:00:00Z",
+          "finishDate": "2016-02-01T00:00:00Z"
+        },
+        {
+          "name": "Project Iota",
+          "startDate": "2016-03-01T00:00:00Z",
+          "finishDate": null
+        }
+      ],
+      "leave": [
+        {
+          "requestDate": "2022-09-01T00:00:00Z",
+          "startDate": "2022-09-15T00:00:00Z",
+          "endDate": "2022-09-20T00:00:00Z",
+          "status": "approved"
+        },
+        {
+          "requestDate": "2022-10-10T00:00:00Z",
+          "startDate": "2022-11-01T00:00:00Z",
+          "endDate": "2022-11-05T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "requestDate": "2023-09-01T00:00:00Z",
+          "startDate": "2023-09-15T00:00:00Z",
+          "endDate": "2023-09-20T00:00:00Z",
+          "status": "approved"
+        },
+        {
+          "requestDate": "2023-10-10T00:00:00Z",
+          "startDate": "2023-11-01T00:00:00Z",
+          "endDate": "2023-11-05T00:00:00Z",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "firstname": "Olivia",
+      "lastname": "Garcia",
+      "phoneNum": "+1447890654",
+      "email": "olivia.garcia@example.com",
+      "dateOfBirth": "1989-04-05T00:00:00Z",
+      "gender": "Female",
+      "department": "Development",
+      "designation": "Python Developer",
+      "type": "remote",
+      "joiningDate": "2020-01-15T00:00:00Z",
+      "status": "full-time",
+      "skypeId": "olivia.garcia.skype",
+      "slackId": "@oliviagarcia",
+      "githubId": "oliviagarcia",
+      "profileImg": "pexels-olly-774909.jpg",
+      "attendance": [
+        {
+          "date": "2023-06-25",
+          "checkIn": "2023-06-25T09:00:00Z",
+          "checkOut": "2023-06-25T18:00:00Z",
+          "breakTime": "2023-06-25T13:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-26",
+          "checkIn": "2023-06-26T09:15:00Z",
+          "checkOut": "2023-06-26T18:15:00Z",
+          "breakTime": "2023-06-26T13:15:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-27",
+          "checkIn": "2023-06-27T09:30:00Z",
+          "checkOut": "2023-06-27T18:30:00Z",
+          "breakTime": "2023-06-27T13:30:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-28",
+          "checkIn": "2023-06-28T09:45:00Z",
+          "checkOut": "2023-06-28T18:45:00Z",
+          "breakTime": "2023-06-28T13:45:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-29",
+          "checkIn": "2023-06-29T09:00:00Z",
+          "checkOut": "2023-06-29T18:00:00Z",
+          "breakTime": "2023-06-29T13:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        }
+      ],
+      "projects": [
+        {
+          "name": "Project Kappa",
+          "startDate": "2020-02-01T00:00:00Z",
+          "finishDate": "2020-09-01T00:00:00Z"
+        },
+        {
+          "name": "Project Lambda",
+          "startDate": "2020-10-01T00:00:00Z",
+          "finishDate": null
+        }
+      ],
+      "leave": [
+        {
+          "requestDate": "2022-10-01T00:00:00Z",
+          "startDate": "2022-10-15T00:00:00Z",
+          "endDate": "2022-10-20T00:00:00Z",
+          "status": "approved"
+        },
+        {
+          "requestDate": "2022-11-10T00:00:00Z",
+          "startDate": "2022-12-01T00:00:00Z",
+          "endDate": "2022-12-05T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "requestDate": "2023-10-01T00:00:00Z",
+          "startDate": "2023-10-15T00:00:00Z",
+          "endDate": "2023-10-20T00:00:00Z",
+          "status": "approved"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "firstname": "Ethan",
+      "lastname": "Walker",
+      "phoneNum": "+1664789234",
+      "email": "ethan.walker@example.com",
+      "dateOfBirth": "1990-05-15T00:00:00Z",
+      "gender": "Male",
+      "department": "Development",
+      "designation": "React JS Developer",
+      "type": "office",
+      "joiningDate": "2019-03-20T00:00:00Z",
+      "status": "full-time",
+      "skypeId": "ethan.walker.skype",
+      "slackId": "@ethanwalker",
+      "githubId": "ethanwalker",
+      "profileImg": "pexels-andrewpersonaltraining-697509.jpg",
+      "attendance": [
+        {
+          "date": "2023-06-25",
+          "checkIn": "2023-06-25T09:00:00Z",
+          "checkOut": "2023-06-25T18:00:00Z",
+          "breakTime": "2023-06-25T13:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-26",
+          "checkIn": "2023-06-26T09:15:00Z",
+          "checkOut": "2023-06-26T18:15:00Z",
+          "breakTime": "2023-06-26T13:15:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-27",
+          "checkIn": "2023-06-27T09:30:00Z",
+          "checkOut": "2023-06-27T18:30:00Z",
+          "breakTime": "2023-06-27T13:30:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-28",
+          "checkIn": "2023-06-28T09:45:00Z",
+          "checkOut": "2023-06-28T18:45:00Z",
+          "breakTime": "2023-06-28T13:45:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-29",
+          "checkIn": "2023-06-29T09:00:00Z",
+          "checkOut": "2023-06-29T18:00:00Z",
+          "breakTime": "2023-06-29T13:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        }
+      ],
+      "projects": [
+        {
+          "name": "Project Mu",
+          "startDate": "2019-04-01T00:00:00Z",
+          "finishDate": "2019-10-01T00:00:00Z"
+        },
+        {
+          "name": "Project Nu",
+          "startDate": "2019-11-01T00:00:00Z",
+          "finishDate": null
+        }
+      ],
+      "leave": [
+        {
+          "requestDate": "2022-10-15T00:00:00Z",
+          "startDate": "2022-10-30T00:00:00Z",
+          "endDate": "2022-11-04T00:00:00Z",
+          "status": "approved"
+        },
+        {
+          "requestDate": "2022-11-20T00:00:00Z",
+          "startDate": "2022-12-10T00:00:00Z",
+          "endDate": "2022-12-15T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "requestDate": "2023-10-15T00:00:00Z",
+          "startDate": "2023-10-30T00:00:00Z",
+          "endDate": "2023-11-04T00:00:00Z",
+          "status": "approved"
+        },
+        {
+          "requestDate": "2023-11-20T00:00:00Z",
+          "startDate": "2023-12-10T00:00:00Z",
+          "endDate": "2023-12-15T00:00:00Z",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "firstname": "Sophia",
+      "lastname": "Hernandez",
+      "phoneNum": "+1789054321",
+      "email": "sophia.hernandez@example.com",
+      "dateOfBirth": "1985-07-25T00:00:00Z",
+      "gender": "Female",
+      "department": "Design",
+      "designation": "UI/UX Designer",
+      "type": "office",
+      "joiningDate": "2014-05-12T00:00:00Z",
+      "status": "full-time",
+      "skypeId": "sophia.hernandez.skype",
+      "slackId": "@sophiahernandez",
+      "githubId": "sophiahernandez",
+      "profileImg": "michael-dam-mEZ3PoFGs_k-unsplash.jpg",
+      "attendance": [
+        {
+          "date": "2023-06-25",
+          "checkIn": "2023-06-25T08:00:00Z",
+          "checkOut": "2023-06-25T17:00:00Z",
+          "breakTime": "2023-06-25T12:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-26",
+          "checkIn": "2023-06-26T08:00:00Z",
+          "checkOut": "2023-06-26T17:00:00Z",
+          "breakTime": "2023-06-26T12:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-27",
+          "checkIn": "2023-06-27T08:00:00Z",
+          "checkOut": "2023-06-27T17:00:00Z",
+          "breakTime": "2023-06-27T12:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-28",
+          "checkIn": "2023-06-28T08:00:00Z",
+          "checkOut": "2023-06-28T17:00:00Z",
+          "breakTime": "2023-06-28T12:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        },
+        {
+          "date": "2023-06-29",
+          "checkIn": "2023-06-29T08:00:00Z",
+          "checkOut": "2023-06-29T17:00:00Z",
+          "breakTime": "2023-06-29T12:00:00Z",
+          "duration": "PT8H",
+          "numberOfWorkingHours": 8
+        }
+      ],
+      "projects": [
+        {
+          "name": "Project Xi",
+          "startDate": "2014-06-01T00:00:00Z",
+          "finishDate": "2015-01-01T00:00:00Z"
+        },
+        {
+          "name": "Project Omicron",
+          "startDate": "2015-02-01T00:00:00Z",
+          "finishDate": null
+        }
+      ],
+      "leave": [
+        {
+          "requestDate": "2022-08-15T00:00:00Z",
+          "startDate": "2022-08-30T00:00:00Z",
+          "endDate": "2022-09-04T00:00:00Z",
+          "status": "approved"
+        },
+        {
+          "requestDate": "2022-09-20T00:00:00Z",
+          "startDate": "2022-10-10T00:00:00Z",
+          "endDate": "2022-10-15T00:00:00Z",
+          "status": "pending"
+        },
+        {
+          "requestDate": "2023-08-15T00:00:00Z",
+          "startDate": "2023-08-30T00:00:00Z",
+          "endDate": "2023-09-04T00:00:00Z",
+          "status": "approved"
+        }
+      ]
+    }
+  ]
+}
