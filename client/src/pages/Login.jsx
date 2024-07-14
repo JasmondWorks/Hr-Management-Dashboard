@@ -1,9 +1,35 @@
+import React, { useState } from "react";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
+import { app } from "../firebase-config";
+
 import { Link } from "react-router-dom";
 import InputBoxAnimLabel from "../components/InputBoxAnimLabel";
 import AuthPagesWrapper from "../components/AuthPagesWrapper";
 import Button from "../components/Button";
 
+const auth = getAuth(app);
+
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+      setError(error.message);
+    }
+
+    setLoading(false);
+  };
+
   return (
     <AuthPagesWrapper>
       <div
@@ -66,12 +92,16 @@ function Login() {
       <p style={{ marginBottom: "2rem" }}>
         <small>Please Login Here</small>
       </p>
-      <form style={{ display: "grid", gap: "1.5rem" }}>
+      <form onSubmit={handleSignIn} style={{ display: "grid", gap: "1.5rem" }}>
         <InputBoxAnimLabel
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
           label="Email Address"
           placeholder="abcdefg@gmail.com"
         />
         <InputBoxAnimLabel
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
           label="Password"
           placeholder="xxxxxxxxx"
           type="password"
@@ -94,6 +124,7 @@ function Login() {
         </div>
         <Link to="/">
           <Button
+            disabled={loading}
             variant="accent"
             style={{ width: "100%", marginTop: "1.5rem" }}
           >
@@ -101,6 +132,7 @@ function Login() {
           </Button>
         </Link>
       </form>
+      {error && <p>Error: {error}</p>}
     </AuthPagesWrapper>
   );
 }

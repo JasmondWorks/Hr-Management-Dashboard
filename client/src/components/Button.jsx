@@ -8,6 +8,7 @@ function Button({
   onClick,
   size = "",
   text = "",
+  disabled = "false",
 }) {
   return (
     <button

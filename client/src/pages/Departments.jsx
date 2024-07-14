@@ -5,7 +5,6 @@ import Loader from "../components/Loader";
 import DeptMembersList from "../components/DeptMembersList";
 import useEmployees from "../hooks/useEmployees";
 import { useEffect, useState } from "react";
-import useFetch from "../hooks/useFetch";
 
 function Departments() {
   const { employees, isLoadingAll } = useEmployees();
