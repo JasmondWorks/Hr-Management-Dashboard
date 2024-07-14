@@ -55,6 +55,8 @@ function EmployeeDetails() {
   const { id: employeeId } = useParams();
   const { employee, isLoadingSingle } = useEmployees(employeeId);
 
+  console.log(isLoadingSingle, employee);
+
   if (isLoadingSingle) return <Loader />;
 
   return (
