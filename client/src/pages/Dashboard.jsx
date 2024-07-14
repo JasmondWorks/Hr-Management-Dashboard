@@ -13,8 +13,6 @@ import TopBar from "../components/TopBar";
 // import Calendar from "react-calendar";
 
 import "react-calendar/dist/Calendar.css";
-import { useEffect, useState } from "react";
-import useFetch from "../hooks/useFetch";
 import useEmployees from "../hooks/useEmployees";
 import Loader from "../components/Loader";
 
@@ -149,6 +147,9 @@ const apiUrl = import.meta.env.VITE_DB_BASE_URL;
 
 function Dashboard() {
   const { employees, isLoadingAll } = useEmployees();
+
+  console.log(employees);
+
   const { data: applicants } = useFetch(`${apiUrl}/candidates`);
 
   let numEmployees = employees?.length;
@@ -166,29 +167,6 @@ function Dashboard() {
   // let numApplicants = applicants?.length
   // let numAttendances =
   // let numProjects =
-  useEffect(() => {
-    // function calcSummary() {
-    //   setTotalCounts((prev) => {
-    //     return { ...prev, numEmployees: employees.length };
-    //   });
-    //   setTotalCounts((prev) => {
-    //     return { ...prev, numApplicants: applicants.length };
-    //   });
-    //   setTotalCounts((prev) => {
-    //     return {
-    //       ...prev,
-    //       numAttendance: employees.flatMap((emp) => emp.attendance).length,
-    //     };
-    //   });
-    //   setTotalCounts((prev) => {
-    //     return {
-    //       ...prev,
-    //       numProjects: employees.flatMap((emp) => emp.projects).length,
-    //     };
-    //   });
-    // }
-    // calcSummary();
-  }, [employees, applicants]);
 
   if (isLoadingAll) return <Loader />;
 

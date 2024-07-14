@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
+// const apiKey = import.meta.env.VITE_API_KEY;
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyCo7i7rKggzbIF05uxHPG-sy4LsplhElI8",
   authDomain: "hr-management-7c8f4.firebaseapp.com",
   projectId: "hr-management-7c8f4",
@@ -11,18 +12,5 @@ const firebaseConfig = {
   measurementId: "G-VHSEJWVW63",
 };
 
-fetch("http://localhost:3000/admins")
-  .then((res) => res.json())
-  .then((adminsData) => {});
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore();
-
-async function addDocument(entity, collectionName) {
-  try {
-    const docRef = await addDoc(collection(db, collectionName), entity);
-    console.log("Document written with ID: ", docRef.id);
-  } catch (err) {
-    console.error("Error adding document: ", err);
-  }
-}
+export const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
